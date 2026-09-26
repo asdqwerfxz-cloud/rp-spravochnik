@@ -89,6 +89,8 @@ header h1 {
     padding: 20px;
     margin-bottom: 18px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .card h2 {
