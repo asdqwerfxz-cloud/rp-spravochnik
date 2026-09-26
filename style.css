@@ -14,7 +14,7 @@ header {
     text-align: center;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
 }
 
 header h1 {
@@ -53,7 +53,7 @@ header h1 {
 /* Поле поиска */
 .search-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto 25px auto;
 }
 
