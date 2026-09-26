@@ -77,7 +77,7 @@ header h1 {
 /* Контейнер карточек — 1300px */
 #articlesList {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1100px; /* Сделайте такую же ширину, как у поиска (1100px) */
     margin: 0 auto;
 }
 
