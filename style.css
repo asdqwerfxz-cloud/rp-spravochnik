@@ -170,7 +170,6 @@ header h1 {
 }
 
 /* ==================== МОДАЛЬНОЕ ОКНО КАТЕГОРИЙ ==================== */
-
 .categories-modal {
     display: none;
     position: fixed;
@@ -182,6 +181,8 @@ header h1 {
     z-index: 1000;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .categories-window {
