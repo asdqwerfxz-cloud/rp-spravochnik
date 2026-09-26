@@ -1,0 +1,369 @@
+/* Общие настройки страницы */
+body {
+    background-color: #121614;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+}
+
+/* Кнопка открытия категорий */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.cat-btn {
+    background-color: #2b3524;
+    color: #ffffff;
+    border: 1px solid #4B5320;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.cat-btn:hover {
+    background-color: #4B5320;
+}
+
+/* Поле поиска */
+.search-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #1c231e;
+    border: 1px solid #4B5320;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #6b772e;
+    box-shadow: 0 0 8px rgba(75, 83, 32, 0.6);
+}
+
+/* Контейнер карточек — 1300px */
+#articlesList {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Карточки статей */
+.card {
+    background-color: #1c231e;
+    border: 1px solid #4B5320;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    color: #ffffff !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.35rem;
+}
+
+.card p {
+    color: #d0d0d0;
+    line-height: 1.5;
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+}
+
+/* ==================== ПЛАШКИ ВЕДОМСТВ (BADGES) ==================== */
+
+.badge {
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.badge-uk {
+    background-color: #4B5320 !important;
+    color: #ffffff !important;
+}
+
+.badge-fsb {
+    background-color: #8b0000 !important;
+    color: #ffffff !important;
+}
+
+.badge-mvd {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.badge-prokuratura {
+    background-color: #38bdf8 !important;
+    color: #000000 !important;
+}
+
+.badge-army {
+    background-color: #3f471b !important;
+    color: #ffffff !important;
+}
+
+/* Кнопки действий */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-group a {
+    text-decoration: none;
+}
+
+.btn-copy, .btn-info {
+    background-color: #2b3524;
+    color: #ffffff;
+    border: 1px solid #4B5320;
+    padding: 9px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-copy:hover, .btn-info:hover {
+    background-color: #4B5320;
+    transform: translateY(-1px);
+}
+
+/* ==================== МОДАЛЬНОЕ ОКНО КАТЕГОРИЙ ==================== */
+
+.categories-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-window {
+    background-color: #181f1a;
+    border: 1px solid #4B5320;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 550px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+.categories-window h2 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.categories-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: #a0a0a0;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.categories-close:hover {
+    color: #ffffff;
+}
+
+.category-item {
+    margin-bottom: 12px;
+}
+
+/* Базовый стиль заголовков в модалке */
+.category-title {
+    width: 100%;
+    text-align: left;
+    background-color: #2b3524;
+    color: #ffffff;
+    border: 1px solid #4B5320;
+    padding: 12px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: filter 0.2s;
+}
+
+.category-title:hover {
+    filter: brightness(1.15);
+}
+
+/* Цветовое оформление кнопок ведомств в модалке */
+.btn-uk {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.btn-fsb {
+    background-color: #8b0000 !important;
+    color: #ffffff !important;
+}
+
+.btn-army {
+    background-color: #3f471b !important;
+    color: #ffffff !important;
+}
+
+.btn-mvd {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.btn-prokuratura {
+    background-color: #1e3a8a !important;
+    color: #ffffff !important;
+}
+
+/* Выпадающий контент */
+.category-content {
+    display: none;
+    padding: 12px 16px;
+    background-color: #121614;
+    border: 1px solid #2b3524;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.category-content button {
+    background: #2b3524;
+    border: 1px solid #4B5320;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.category-content button:hover {
+    background-color: #4B5320;
+}
+/* Цветовое оформление кнопок ведомств в модалке */
+.btn-uk {
+    background-color: #374151 !important; /* Мягкий нейтрально-серый цвет, не режет глаза */
+    color: #ffffff !important;
+}
+
+.btn-fsb {
+    background-color: #8b0000 !important;
+    color: #ffffff !important;
+}
+
+.btn-army {
+    background-color: #3f471b !important;
+    color: #ffffff !important;
+}
+
+.btn-mvd {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.btn-prokuratura {
+    background-color: #1e293b !important; /* Насыщенный глубокий темно-синий/аспидный цвет */
+    color: #ffffff !important;
+}
+
+/* Выпадающий контент внутри категорий */
+.category-content {
+    display: none;
+    padding: 12px 16px;
+    background-color: #161616;
+    border: 1px solid #2b2b2b;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.category-content button {
+    background-color: #222222;
+    border: 1px solid #333333;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.category-content button:hover {
+    background-color: #333333;
+}
+/* Кнопка доната / поддержки */
+.donate-btn-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-donate {
+    background-color: #2e4d2b; /* Приятный зеленый оттенок для доната */
+    color: #ffffff;
+    border: 1px solid #4B5320;
+    padding: 10px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-donate:hover {
+    background-color: #3b6337;
+    transform: translateY(-1px);
+}
