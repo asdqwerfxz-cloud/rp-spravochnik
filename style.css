@@ -265,8 +265,8 @@ header h1 {
 }
 
 .btn-fsb {
-    background-color: #c50202 !important;
-    border-color: #2563eb !important;
+    background-color: #c56202 !important; /* Удали старый цвет и поставь красный */
+    border-color: #5e0101 !important;
 }
 
 .btn-army {
@@ -285,7 +285,7 @@ header h1 {
 }
 
 /* Эффект наведения мыши для них */
-.category-title.btn-fsb:hover { background-color: #1e3a8a !important; }
+.category-title.btn-fsb:hover { background-color: #c0392b !important; }
 .category-title.btn-army:hover { background-color: #b45309 !important; }
 .category-title.btn-mvd:hover { background-color: #1d4ed8 !important; }
 .category-title.btn-prokuratura:hover { background-color: #7e22ce !important; }
