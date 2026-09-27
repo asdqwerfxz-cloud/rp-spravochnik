@@ -309,3 +309,32 @@ header h1 {
 .category-title.btn-uk:hover { 
     background-color: #334155 !important; 
 }
+/* Делаем выпадающий блок (контейнер) под фракцией почти черным */
+.category-content {
+    display: none;
+    padding: 12px 16px;
+    background-color: #141715 !important;
+    border: 1px solid #242b26 !important;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+/* Перекрашиваем сами кнопки статей внутри выпадающих списков в темно-серый цвет */
+.category-content button {
+    background-color: #141715 !important;
+    border-color: #2a332d !important;
+    color: #b0b0b0 !important;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Цвет этих кнопок при наведении мыши */
+.category-content button:hover {
+    background-color: #1f2621 !important;
+    border-color: #3d4d42 !important;
+    color: #ffffff !important;
+}
