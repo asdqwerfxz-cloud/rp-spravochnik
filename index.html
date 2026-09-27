@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RP-Справочник | Законы УК, ФСБ, Прокуратуры и МВД</title>
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
     <header>
@@ -55,16 +55,18 @@
         </div>
     </main>
 
-    <!-- МОДАЛЬНОЕ ОКНО КАТЕГОРИЙ -->
+    <!-- ОКНО КАТЕГОРИЙ СО ВСЕМИ ВЕДОМСТВАМИ -->
     <div id="categoriesModal" class="categories-modal">
         <div class="categories-window">
             <button class="categories-close" onclick="closeCategoriesModal()">&times;</button>
-            <h2>Категории законов</h2>
+            <h2>Все статьи</h2>
             
+            <!-- ВСЕ СТАТЬИ (СБРОС ФИЛЬТРА) -->
             <div class="category-item">
                 <button class="category-title" onclick="filterCategory('all')">Показать абсолютно все статьи</button>
             </div>
 
+            <!-- УК РФ -->
             <div class="category-item">
                 <button class="category-title btn-uk" onclick="toggleCategory('ukList')">Уголовный Кодекс (УК РФ) <span>▼</span></button>
                 <div id="ukList" class="category-content">
@@ -72,9 +74,34 @@
                 </div>
             </div>
 
+            <!-- ФСБ -->
             <div class="category-item">
-                <button class="category-title" onclick="toggleCategory('prokuraturalist')">Прокуратура <span>▼</span></button>
-                <div id="prokuraturalist" class="category-content">
+                <button class="category-title btn-fsb" onclick="toggleCategory('fsbList')">ФСБ <span>▼</span></button>
+                <div id="fsbList" class="category-content">
+                    <button onclick="filterCategory('fsb')">Статьи ФСБ</button>
+                </div>
+            </div>
+
+            <!-- АРМИЯ -->
+            <div class="category-item">
+                <button class="category-title btn-army" onclick="toggleCategory('armyList')">Армия (ВС РФ) <span>▼</span></button>
+                <div id="armyList" class="category-content">
+                    <button onclick="filterCategory('army')">Статьи ВС РФ</button>
+                </div>
+            </div>
+
+            <!-- МВД -->
+            <div class="category-item">
+                <button class="category-title btn-mvd" onclick="toggleCategory('mvdList')">МВД / Полиция <span>▼</span></button>
+                <div id="mvdList" class="category-content">
+                    <button onclick="filterCategory('mvd')">Статьи МВД</button>
+                </div>
+            </div>
+
+            <!-- ПРОКУРАТУРА -->
+            <div class="category-item">
+                <button class="category-title btn-prokuratura" onclick="toggleCategory('prokuraturaList')">Прокуратура <span>▼</span></button>
+                <div id="prokuraturaList" class="category-content">
                     <button onclick="filterCategory('prokuratura')">Статьи Прокуратуры</button>
                 </div>
             </div>
