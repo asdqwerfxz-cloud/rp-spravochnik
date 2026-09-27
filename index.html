@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RP-Справочник | Законы УК, ФСБ, Прокуратуры и МВД</title>
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
     <header>
@@ -27,14 +27,25 @@
     </div>
 
     <main id="articlesList">
-        <!-- Пример карточки статьи 1 (сюда можете добавлять остальные статьи) -->
+        <!-- Статья 1 УК РФ с Частью 1 и Частью 2 -->
         <div class="card" data-category="uk" data-keywords="задержание ордер ухвала неприкосновенность госслужащий 1">
             <span class="badge badge-uk">УК РФ</span>
             <h2>Статья 1 УК РФ</h2>
+            
             <div class="article-part">
                 <div class="part-number">Часть 1.</div>
                 <div class="part-text">Задержание сотрудников структур при исполнении разрешено только при наличии официального постановления (ордера).</div>
             </div>
+
+            <div class="article-part">
+                <div class="part-number">Часть 2.</div>
+                <div class="part-text">Исключения из правил:</div>
+                <div class="sub-points">
+                    <div class="sub-item"><span>а)</span> прямая угроза жизни окружающих;</div>
+                    <div class="sub-item"><span>б)</span> попытка скрыться с места преступления.</div>
+                </div>
+            </div>
+
             <div class="btn-group">
                 <button class="btn-copy" onclick="copyText('Задержание сотрудников структур при исполнении разрешено только при наличии официального постановления (ордера).')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
@@ -44,7 +55,7 @@
         </div>
     </main>
 
-    <!-- МОДАЛЬНОЕ ОКНО КАТЕГОРИЙ (Из вашего сохранения) -->
+    <!-- МОДАЛЬНОЕ ОКНО КАТЕГОРИЙ -->
     <div id="categoriesModal" class="categories-modal">
         <div class="categories-window">
             <button class="categories-close" onclick="closeCategoriesModal()">&times;</button>
@@ -70,7 +81,7 @@
         </div>
     </div>
 
-    <!-- ПОДВАЛ САЙТА (Из вашего сохранения) -->
+    <!-- ПОДВАЛ САЙТА -->
     <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid #374151; text-align: center; color: #9ca3af; font-size: 14px; width: 100%;">
         <p>© Справочник. Все права защищены.</p>
         <p style="margin-top: 8px;">
@@ -79,7 +90,7 @@
         </p>
     </footer>
 
-    <!-- СКРИПТ ПОДКЛЮЧЕН СТРОГО ПЕРЕД ТЕГОМ BODY -->
+    <!-- СКРИПТЫ -->
     <script src="script.js"></script>
 </body>
 </html>
