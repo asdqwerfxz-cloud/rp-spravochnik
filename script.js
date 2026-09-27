@@ -42,39 +42,48 @@ function filterCategory(category) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
-        }
+        }В
     });
 
     closeCategoriesModal();
 }
-// Поиск по ключевым словам и заголовкам (поддерживает раздельный поиск слов)
+
+// Поиск по ключевым словам с переносом найденных статей наверх
 function searchArticles() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.card');
-
-    // Разбиваем поисковой запрос на отдельные слова (по пробелам)
+    const articlesList = document.getElementById('articlesList');
     const searchTerms = query.split(/\s+/).filter(term => term.length > 0);
+
+    if (searchTerms.length === 0) {
+        cards.forEach(card => card.style.display = 'block');
+        return;
+    }
+
+    let firstFoundCard = null;
 
     cards.forEach(card => {
         const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
         const text = card.textContent.toLowerCase();
         const combinedContent = keywords + " " + text;
 
-        // Если ничего не введено — показываем все карточки
-        if (searchTerms.length === 0) {
-            card.style.display = 'block';
-            return;
-        }
-
-        // Проверяем, содержатся ли ВСЕ введенные слова в карточке
         const matchesAll = searchTerms.every(term => combinedContent.includes(term));
 
         if (matchesAll) {
             card.style.display = 'block';
+            articlesList.prepend(card); // Переносим найденную карточку на самый верх
+            
+            if (!firstFoundCard) {
+                firstFoundCard = card;
+            }
         } else {
             card.style.display = 'none';
         }
     });
+
+    if (firstFoundCard) {
+        firstFoundCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 // Закрытие модального окна при клике вне его области
