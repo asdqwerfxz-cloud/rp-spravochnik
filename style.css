@@ -289,3 +289,19 @@ header h1 {
 .category-title.btn-army:hover { background-color: #b45309 !important; }
 .category-title.btn-mvd:hover { background-color: #1d4ed8 !important; }
 .category-title.btn-prokuratura:hover { background-color: #7e22ce !important; }
+/* Делаем карточки статей почти черными */
+.card {
+    background-color: #141715 !important;
+    border-color: #2a332d !important;
+}
+
+/* Делаем текст в частях статей приятно-серым */
+.part-text {
+    color: #b0b0b0 !important;
+}
+
+/* Внутренние блоки статей тоже делаем темнее */
+.article-part {
+    background-color: #0f1210 !important;
+    border-color: #1f2621 !important;
+}
