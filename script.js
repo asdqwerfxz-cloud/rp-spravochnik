@@ -48,42 +48,32 @@ function filterCategory(category) {
     closeCategoriesModal();
 }
 
-// Поиск по ключевым словам с переносом найденных статей наверх
+// Поиск по ключевым словам без подпрыгивания и сброса позиции страницы
 function searchArticles() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.card');
-    const articlesList = document.getElementById('articlesList');
     const searchTerms = query.split(/\s+/).filter(term => term.length > 0);
-
-    if (searchTerms.length === 0) {
-        cards.forEach(card => card.style.display = 'block');
-        return;
-    }
-
-    let firstFoundCard = null;
 
     cards.forEach(card => {
         const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
         const text = card.textContent.toLowerCase();
         const combinedContent = keywords + " " + text;
 
+        // Если строка поиска пуста — показываем все карточки
+        if (searchTerms.length === 0) {
+            card.style.display = 'block';
+            return;
+        }
+
+        // Проверяем соответствие поисковым словам
         const matchesAll = searchTerms.every(term => combinedContent.includes(term));
 
         if (matchesAll) {
             card.style.display = 'block';
-            articlesList.prepend(card); // Переносим найденную карточку на самый верх
-            
-            if (!firstFoundCard) {
-                firstFoundCard = card;
-            }
         } else {
             card.style.display = 'none';
         }
     });
-
-    if (firstFoundCard) {
-        firstFoundCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
 }
 
 // Закрытие модального окна при клике вне его области
