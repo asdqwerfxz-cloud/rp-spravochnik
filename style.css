@@ -383,3 +383,22 @@ header h1 {
     display: inline-block;
     margin-bottom: 10px;
 }
+/* Стили для карточек и бейджей подразделений Армии (БО, ОС, ВП, МСВ, ВДВ, ССО) */
+.card[data-category="army-bo"],
+.card[data-category="army-os"],
+.card[data-category="army-vp"],
+.card[data-category="army-msv"],
+.card[data-category="army-vdv"],
+.card[data-category="army-sso"] {
+    border-left: 4px solid #d97706; /* Цвет левой полоски карточки */
+}
+
+.card[data-category="army-bo"] .badge,
+.card[data-category="army-os"] .badge,
+.card[data-category="army-vp"] .badge,
+.card[data-category="army-msv"] .badge,
+.card[data-category="army-vdv"] .badge,
+.card[data-category="army-sso"] .badge {
+    background-color: #d97706; /* Цвет фона бейджа */
+    color: #ffffff;            /* Цвет текста */
+}
