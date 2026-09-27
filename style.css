@@ -300,11 +300,6 @@ header h1 {
     color: #b0b0b0 !important;
 }
 
-/* Внутренние блоки статей тоже делаем темнее */
-.article-part {
-    background-color: #0f1210 !important;
-    border-color: #1f2621 !important;
-}
 /* Делаем кнопку УК РФ стильной и заметной (темно-графитовый оттенок) */
 .btn-uk {
     background-color: #1e293b !important;
