@@ -451,3 +451,22 @@ header h1 {
     color: #4B5320;
     font-weight: bold;
 }
+/* Подпункты на div-элементах (без точек) */
+.sub-points {
+    margin: 6px 0 0 15px;
+}
+
+.sub-item {
+    color: #c0c0c0;
+    font-size: 0.95rem;
+    padding: 4px 0;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.sub-item > span {
+    color: #8b9bb4;
+    font-weight: bold;
+    min-width: 20px;
+}
