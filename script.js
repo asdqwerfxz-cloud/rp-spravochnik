@@ -52,22 +52,25 @@ function filterCategory(category) {
     closeCategoriesModal();
 }
 
-// Поиск по ключевым словам с автоскрытием пустых глав
+// Универсальный поиск с автоскрытием всех глав и заголовков
 function searchArticles() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.card');
-    const chapterTitles = document.querySelectorAll('.chapter-title');
+    const articlesList = document.getElementById('articlesList');
+    
+    // Находим абсолютно все заголовки, главы и разделители на странице
+    const allHeadings = document.querySelectorAll('.chapter-title, .section-divider, h3, h4');
     const searchTerms = query.split(/\s+/).filter(term => term.length > 0);
 
     // Если строка поиска пуста — возвращаем всё на место
     if (searchTerms.length === 0) {
         cards.forEach(card => card.style.display = 'block');
-        chapterTitles.forEach(title => title.style.display = 'block');
+        allHeadings.forEach(item => item.style.display = 'block');
         return;
     }
 
-    // Во время поиска скрываем все заголовки глав, чтобы они не мешали сверху
-    chapterTitles.forEach(title => title.style.display = 'none');
+    // Во время поиска скрываем вообще все заголовки глав, чтобы они не занимали место сверху
+    allHeadings.forEach(item => item.style.display = 'none');
 
     cards.forEach(card => {
         const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
@@ -78,6 +81,8 @@ function searchArticles() {
 
         if (matchesAll) {
             card.style.display = 'block';
+            // Поднимаем найденную статью в самый верх под строку поиска
+            articlesList.prepend(card);
         } else {
             card.style.display = 'none';
         }
