@@ -34,8 +34,12 @@ function toggleCategory(listId) {
 // Фильтрация статей по категории из модалки
 function filterCategory(category) {
     const cards = document.querySelectorAll('.card');
+    const chapterTitles = document.querySelectorAll('.chapter-title');
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.value = ''; // Сбрасываем поисковый ввод
+
+    // При выборе категории показываем заголовки глав
+    chapterTitles.forEach(title => title.style.display = 'block');
 
     cards.forEach(card => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
@@ -48,24 +52,28 @@ function filterCategory(category) {
     closeCategoriesModal();
 }
 
-// Поиск по ключевым словам без подпрыгивания и сброса позиции страницы
+// Поиск по ключевым словам с автоскрытием пустых глав
 function searchArticles() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.card');
+    const chapterTitles = document.querySelectorAll('.chapter-title');
     const searchTerms = query.split(/\s+/).filter(term => term.length > 0);
+
+    // Если строка поиска пуста — возвращаем всё на место
+    if (searchTerms.length === 0) {
+        cards.forEach(card => card.style.display = 'block');
+        chapterTitles.forEach(title => title.style.display = 'block');
+        return;
+    }
+
+    // Во время поиска скрываем все заголовки глав, чтобы они не мешали сверху
+    chapterTitles.forEach(title => title.style.display = 'none');
 
     cards.forEach(card => {
         const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
         const text = card.textContent.toLowerCase();
         const combinedContent = keywords + " " + text;
 
-        // Если строка поиска пуста — показываем все карточки
-        if (searchTerms.length === 0) {
-            card.style.display = 'block';
-            return;
-        }
-
-        // Проверяем соответствие поисковым словам
         const matchesAll = searchTerms.every(term => combinedContent.includes(term));
 
         if (matchesAll) {
