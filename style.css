@@ -305,3 +305,12 @@ header h1 {
     background-color: #0f1210 !important;
     border-color: #1f2621 !important;
 }
+/* Делаем кнопку УК РФ стильной и заметной */
+.btn-uk {
+    background-color: #1e293b !important;
+    border-color: #475569 !important;
+}
+
+.category-title.btn-uk:hover { 
+    background-color: #334155 !important; 
+}
