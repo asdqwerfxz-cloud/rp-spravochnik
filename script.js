@@ -42,7 +42,7 @@ function filterCategory(category) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
-        }В
+        }
     });
 
     closeCategoriesModal();
