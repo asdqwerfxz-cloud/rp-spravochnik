@@ -196,14 +196,16 @@ header h1 {
     transform: translate(-50%, -50%);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
     display: flex;
-    flex-direction: column; /* Выстраиваем блоки внутри строго по центру */
-    align-items: center;    /* Выравниваем содержимое по центру */
+    flex-direction: column; 
+    align-items: stretch; /* Растягиваем элементы на всю ширину окна */
 }
 
 .categories-window h2 {
     color: #ffffff;
     margin-top: 0;
     margin-bottom: 20px;
+    text-align: center; /* Заголовок строго по центру */
+    width: 100%;
 }
 
 .categories-close {
@@ -381,4 +383,68 @@ header h1 {
     text-align: center;
     padding: 0 15px;
     word-break: break-word;
+}
+/* ==================== СТРУКТУРА СТАТЕЙ (ЧАСТИ, ПУНКТЫ, ПОДПУНКТЫ) ==================== */
+
+.article-part {
+    background-color: #161c17;
+    border: 1px solid #2b3524;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+}
+
+.part-number {
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.part-text {
+    color: #d0d0d0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* Первый уровень подпунктов (а, б, в) */
+.sub-points {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0;
+}
+
+.sub-points > li {
+    color: #c0c0c0;
+    font-size: 0.95rem;
+    padding: 4px 0;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.sub-points > li > span {
+    color: #8b9bb4;
+    font-weight: bold;
+    min-width: 20px;
+}
+
+/* Второй уровень подпунктов (если внутри пункта есть еще дефисы или цифры 1, 2) */
+.sub-points-deep {
+    list-style: none;
+    padding-left: 20px;
+    margin: 4px 0;
+}
+.sub-points-deep li {
+    color: #a8a8a8;
+    font-size: 0.9rem;
+    padding: 3px 0;
+    display: flex;
+    gap: 8px;
+}
+
+.sub-points-deep li span {
+    color: #4B5320;
+    font-weight: bold;
 }
