@@ -410,11 +410,15 @@ header h1 {
 
 /* Первый уровень подпунктов (а, б, в) */
 .sub-points {
-    list-style: none; /* убирает стандартные точки */
-    padding-left: 20px;
-    margin: 4px 0;
+    list-style: none !important;
+    list-style-type: none !important;
+    padding-left: 0;
+    margin: 6px 0;
 }
+
 .sub-points > li {
+    list-style: none !important;
+    list-style-type: none !important;
     color: #c0c0c0;
     font-size: 0.95rem;
     padding: 4px 0;
