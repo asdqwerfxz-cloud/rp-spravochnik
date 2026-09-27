@@ -47,17 +47,29 @@ function filterCategory(category) {
 
     closeCategoriesModal();
 }
-
-// Поиск по ключевым словам и заголовкам
+// Поиск по ключевым словам и заголовкам (поддерживает раздельный поиск слов)
 function searchArticles() {
-    const input = document.getElementById('searchInput').value.toLowerCase().trim();
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.card');
+
+    // Разбиваем поисковой запрос на отдельные слова (по пробелам)
+    const searchTerms = query.split(/\s+/).filter(term => term.length > 0);
 
     cards.forEach(card => {
         const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
         const text = card.textContent.toLowerCase();
+        const combinedContent = keywords + " " + text;
 
-        if (keywords.includes(input) || text.includes(input)) {
+        // Если ничего не введено — показываем все карточки
+        if (searchTerms.length === 0) {
+            card.style.display = 'block';
+            return;
+        }
+
+        // Проверяем, содержатся ли ВСЕ введенные слова в карточке
+        const matchesAll = searchTerms.every(term => combinedContent.includes(term));
+
+        if (matchesAll) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
