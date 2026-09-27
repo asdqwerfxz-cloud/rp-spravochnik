@@ -34,12 +34,16 @@ function toggleCategory(listId) {
 // Фильтрация статей по категории из модалки
 function filterCategory(category) {
     const cards = document.querySelectorAll('.card');
-    const chapterTitles = document.querySelectorAll('.chapter-title');
+    const allHeadings = document.querySelectorAll('.chapter-title, .section-divider, h3, h4');
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.value = ''; // Сбрасываем поисковый ввод
 
-    // При выборе категории показываем заголовки глав
-    chapterTitles.forEach(title => title.style.display = 'block');
+    // Если выбраны «Все статьи» — возвращаем заголовки обратно, иначе скрываем их
+    if (category === 'all') {
+        allHeadings.forEach(item => item.style.display = 'block');
+    } else {
+        allHeadings.forEach(item => item.style.display = 'none');
+    }
 
     cards.forEach(card => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
