@@ -4,178 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RP-Справочник | Законы УК, ФСБ, Прокуратуры и МВД</title>
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
     <header>
-        <!-- Баннер альфа-версии -->
         <div class="alpha-banner">
-            <span>⚠️ Альфа-версия:</span> Сайт находится в разработке, возможны неточности в статьях. Если нашли ошибку, напишите мне в Discord: <b>https://discordapp.com/users/1407659229111914548</b>
+            <span>⚠️ Альфа-версия:</span> Сайт находится в разработке. Ошибки пишите в Discord: <b>https://discordapp.com/users/1407659229111914548</b>
         </div>
         <h1>🏛️ RP-Справочник</h1>
-
-        <!-- КНОПКИ БЫСТРОГО ФИЛЬТРА ПО ПОДРАЗДЕЛЕНИЯМ -->
         <div class="category-buttons">
-            <button class="cat-btn cat-all" onclick="openCategoriesModal()">
-                Все статьи ▼
-            </button>
+            <button class="cat-btn cat-all" onclick="openCategoriesModal()">Все статьи ▼</button>
         </div>
         <p class="subtitle">Упрощенные законы УК РФ, О ФЗ-ФСБ, Прокуратуры, МВД. | <a href="donate.html" style="color: #a0a0a0; text-decoration: underline;">Поддержать проект ☕</a></p>
-    <!-- ПОИСК -->
+    </header>
+
     <div class="search-container">
-        <input 
-            type="text" 
-            id="searchInput" 
-           placeholder="Поиск статьи или слова (например: 27 статья УК РФ)..."
-            oninput="searchArticles()"
-        >
+        <input type="text" id="searchInput" placeholder="Поиск статьи или слова (например: 2 статья УК РФ)..." oninput="searchArticles()">
     </div>
 
     <main id="articlesList">
         <!-- Статья 1 УК РФ -->
-<div class="card uk" data-category="uk" data-keywords="задержание ордер ухвала неприкосновенность госслужащий">
-    <span class="badge badge-uk">УК РФ</span>
-    <h2>Статья 1 УК РФ</h2>
-    
-    <!-- Часть 1 -->
-    <div class="article-part">
-        <div class="part-number">Часть 1.</div>
-        <div class="part-text">Задержание сотрудников структур при исполнении разрешено только при наличии официального постановления (ордера).</div>
-    </div>
+        <div class="card" data-category="uk" data-keywords="задержание ордер ухвала неприкосновенность госслужащий">
+            <span class="badge badge-uk">УК РФ</span>
+            <h2>Статья 1 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-number">Часть 1.</div>
+                <div class="part-text">Задержание сотрудников структур при исполнении разрешено только при наличии официального постановления (ордера).</div>
+            </div>
+            <div class="article-part">
+                <div class="part-number">Часть 2.</div>
+                <div class="part-text">Исключения из правил:</div>
+                <div class="sub-points">
+                    <div class="sub-item"><span>а)</span> прямая угроза жизни окружающих;</div>
+                    <div class="sub-item"><span>б)</span> попытка скрыться с места преступления.</div>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy" onclick="copyText('Задержание сотрудников структур при исполнении разрешено только при наличии официального постановления (ордера).')">Отыгровка</button>
+                <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/3a8c1f0b09f1a2efd824d51b3ea59d482a51f38c/" target="_blank">
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
+                </a>
+            </div>
+        </div>
 
-    <!-- Часть 2 с пунктами -->
-    <div class="article-part">
-        <div class="part-number">Часть 2.</div>
-    <div class="part-text">Исключения из правил:</div>
-        <ul class="sub-points">
-            <li><span>а)</span> прямая угроза жизни окружающих;</li>
-            <li><span>б)</span> попытка скрыться с места преступления.</li>
-        </ul>
-    </div>
-
-    <div class="btn-group">
-        <button class="btn-copy" onclick="copyText('Задержание сотрудников структур при исполнении разрешено только при наличии официального постановления (ордера).')">Отыгровка</button>
-        <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/3a8c1f0b09f1a2efd824d51b3ea59d482a51f38c/" target="_blank">
-            <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
-        </a>
-    </div>
-</div>
         <!-- Статья 2 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="видеофиксация боди-камера запись обыск арест">
+        <div class="card" data-category="uk" data-keywords="видеофиксация боди-камера запись обыск арест">
             <span class="badge badge-uk">УК РФ</span>
             <h2>Статья 2 УК РФ</h2>
-            <p><b>Суть:</b> Любое задержание, арест или обыск гражданского лица госслужащими должны строго фиксироваться на видео (боди-камеру) с обязательным хранением записи.</p>
+            <div class="article-part">
+                <div class="part-text"><b>Суть:</b> Любое задержание, арест или обыск гражданского лица госслужащими должны строго фиксироваться на видео (боди-камеру) с обязательным хранением записи.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('Ведется ли фиксация процесса задержания на боди-камеру? В случае отсутствия записи задержание незаконно!')">📋 Отыгровка</button>
-                <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/38d821369c73e86c0c800b462f4e3c3d52673d32/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                <button class="btn-copy" onclick="copyText('Любое задержание, арест или обыск гражданского лица госслужащими должны строго фиксироваться на видео (боди-камеру) с обязательным хранением записи.')">Отыгровка</button>
+                <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/38d821369c73e86c0c800b462f4e3c3d52673d32" target="_blank">
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 3 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="неповиновение законное требование полиция мвд фсб 19.3">
+        <div class="card" data-category="uk" data-keywords="неповиновение законное требование полиция правоохранительные органы">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 3 УК РФ — Неповиновение требованию сотрудника</h2>
-            <p><b>Суть:</b> Невыполнение законного требования сотрудника правоохранительных органов (МВД, ФСБ, Росгвардия) при исполнении им служебных обязанностей.</p>
+            <h2>Статья 3 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Неповиновение законному требованию представителя правоохранительных органов при исполнении ими служебных обязанностей.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('Гражданин, вы отказываетесь выполнять законное требование! Вы будете задержаны по статье за неповиновение!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('Гражданин, я делаю вам последнее предупреждение: прекратите противоправные действия и подчинитесь законному требованию сотрудника полиции!')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 4 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="проникновение зт охраняемая территория кпп режим">
+        <div class="card" data-category="uk" data-keywords="незаконное проникновение режимный объект кпп парковка офис фсб">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 4 УК РФ — Проникновение на охраняемый объект</h2>
-            <p><b>Суть:</b> Незаконный проход или проезд на территории с ограниченным доступом (КПП Армии, парковка МВД, офисы ФСБ, закрытые зоны).</p>
+            <h2>Статья 4 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Незаконное проникновение на охраняемый или режимный объект (КПП армии, парковки МВД, закрытые офисы ФСБ).</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('Вы находитесь на охраняемой территории без допуска! Считаю до трех и применяю силу!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('Вы находитесь на закрытой охраняемой территории. Немедленно покиньте режимный объект, в противном случае будет применена физическая сила.')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 5 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="оружие нелегальное хранение ношение лицензия калибр">
+        <div class="card" data-category="uk" data-keywords="незаконное ношение оружия хранение оборот">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 5 УК РФ — Незаконное ношение оружия</h2>
-            <p><b>Суть:</b> Ношение, хранение или перевозка огнестрельного/холодного оружия без действующей лицензии или оружия нелегального калибра.</p>
+            <h2>Статья 5 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Незаконное ношение, хранение или использование огнестрельного/холодного оружия без соответствующей лицензии.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('У вас обнаружено незарегистрированное оружие! Вы задержаны за незаконный оборот оружия!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('Гражданин, у вас при себе обнаружено оружие. Предъявите лицензию на право ношения или извлеките его для проверки.')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 6 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="наркотики вещества хранение сбыт употребление семена">
+        <div class="card" data-category="uk" data-keywords="наркотики запрещенные вещества оборот распространение">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 6 УК РФ — Хранение и сбыт наркотических веществ</h2>
-            <p><b>Суть:</b> Приобретение, хранение, перевозка или продажа наркотических средств и психотропных веществ в любых объемах.</p>
+            <h2>Статья 6 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Незаконный оборот, хранение или распространение наркотических и психотропных веществ.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('В ходе первичного обыска у вас изъяты запрещенные вещества. Вы задержаны!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('В ходе досмотра у гражданина были обнаружены запрещенные вещества. Произвожу изъятие вещдоков.')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 7 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="нападение стрельба ранение убийство госслужащий">
+        <div class="card" data-category="uk" data-keywords="нападение госслужащий сопротивление угроза жизни">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 7 УК РФ — Нападение на сотрудника гос. органов</h2>
-            <p><b>Суть:</b> Применение насилия, угроза применения насилия или посягательство на жизнь сотрудника силовых ведомств при исполнении.</p>
+            <h2>Статья 7 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Нападение на государственного служащего при исполнении им должностных обязанностей.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('Оружие на землю! Вы совершили нападение на сотрудника при исполнении!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('Гражданин совершил нападение на сотрудника при исполнении. Применяю спецсредства для задержания.')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 8 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="похищение заложники удерживание выкуп">
+        <div class="card" data-category="uk" data-keywords="похищение человека свобода незаконное удержание">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 8 УК РФ — Похищение человека</h2>
-            <p><b>Суть:</b> Захват, перемещение и удерживание человека против его воли, в том числе с целью получения выкупа.</p>
+            <h2>Статья 8 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Похищение человека либо незаконное лишение его свободы, совершенное группой лиц или с применением насилия.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('Сложите оружие и освободите заложника! Любая попытка сопротивления будет пресечена на поражение!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('Зафиксирован факт незаконного удержания гражданина. Провожу операцию по освобождению заложника.')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 9 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="взятка подкуп госдеятель передача денег">
+        <div class="card" data-category="uk" data-keywords="взятка коррупция подкуп должностное лицо">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 9 УК РФ — Дача или получение взятки</h2>
-            <p><b>Суть:</b> Попытка подкупа должностного лица или получение должностным лицом денег/имущества за совершение действий в пользу давателя.</p>
+            <h2>Статья 9 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Дача или получение взятки, незаконное вознаграждение должностного лица за совершение определенных действий.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('Попытка дать взятку должностному лицу зафиксирована на камеру. Вы задерживаетесь!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('Гражданин пытается предложить мне денежные средства в качестве взятки. Фиксирую факт подкупа.')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
 
         <!-- Статья 10 УК РФ -->
-        <div class="card uk" data-category="uk" data-keywords="побег наручники КПЗ ТСР погоня спецсредства">
+        <div class="card" data-category="uk" data-keywords="побег задержание стража конвой">
             <span class="badge badge-uk">УК РФ</span>
-            <h2>Статья 10 УК РФ — Побег при задержании или из-под стражи</h2>
-            <p><b>Суть:</b> Попытка скрыться во время процессуальных действий, побег из КПЗ, ТСР или служебного автотранспорта.</p>
+            <h2>Статья 10 УК РФ</h2>
+            <div class="article-part">
+                <div class="part-text">Побег из места лишения свободы, из-под ареста или из-под стражи, а также попытка скрыться при задержании.</div>
+            </div>
             <div class="btn-group">
-                <button class="btn-copy" onclick="copyText('Стоять! Попытка побега при задержании влечет усугубление наказания!')">📋 Отыгровка</button>
+                <button class="btn-copy" onclick="copyText('Задержанный совершил попытку побега из-под конвоя! Открываю предупредительный огонь / применяю меры пресечения.')">Отыгровка</button>
                 <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/" target="_blank">
-                    <button class="btn-info">💡 Оригинальная ссылка на сайт статьи</button>
+                    <button class="btn-info">Оригинальная ссылка на сайт статьи</button>
                 </a>
             </div>
         </div>
+    </main>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
         <!-- Статья 11 УК РФ -->
         <div class="card uk" data-category="uk" data-keywords="хулиганство общественный порядок оскорбление вандализм">
             <span class="badge badge-uk">УК РФ</span>
