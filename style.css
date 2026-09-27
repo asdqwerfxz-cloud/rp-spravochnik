@@ -1,4 +1,3 @@
-/* Общие настройки страницы */
 body {
     background-color: #121614;
     color: #e0e0e0;
@@ -22,12 +21,23 @@ header h1 {
     margin-bottom: 5px;
 }
 
-.subtitle {
-    color: #a0a0a0;
-    font-size: 0.95rem;
+.alpha-banner {
+    background-color: #2b3524;
+    border: 1px solid #4B5320;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
 }
 
-/* Кнопка открытия категорий */
+.subtitle {
+    font-size: 14px;
+    color: #a0a0a0;
+    text-align: center;
+    padding: 0 15px;
+    word-break: break-word;
+}
+
 .category-buttons {
     display: flex;
     justify-content: center;
@@ -50,7 +60,6 @@ header h1 {
     background-color: #4B5320;
 }
 
-/* Поле поиска */
 .search-container {
     width: 100%;
     max-width: 1100px;
@@ -64,7 +73,7 @@ header h1 {
     border: 1px solid #4B5320;
     border-radius: 8px;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.05rem;
     box-sizing: border-box;
     outline: none;
 }
@@ -74,14 +83,12 @@ header h1 {
     box-shadow: 0 0 8px rgba(75, 83, 32, 0.6);
 }
 
-/* Контейнер карточек — 1300px */
 #articlesList {
     width: 100%;
-    max-width: 1300px; /* Сделайте шире, если хотите, чтобы карточки растягивались сильнее */
+    max-width: 1300px;
     margin: 0 auto;
 }
 
-/* Карточки статей */
 .card {
     background-color: #1c231e;
     border: 1px solid #4B5320;
@@ -100,15 +107,6 @@ header h1 {
     font-size: 1.35rem;
 }
 
-.card p {
-    color: #d0d0d0;
-    line-height: 1.5;
-    font-size: 1.05rem;
-    margin-bottom: 14px;
-}
-
-/* ==================== ПЛАШКИ ВЕДОМСТВ (BADGES) ==================== */
-
 .badge {
     padding: 5px 12px;
     border-radius: 4px;
@@ -122,31 +120,11 @@ header h1 {
     color: #ffffff !important;
 }
 
-.badge-fsb {
-    background-color: #8b0000 !important;
-    color: #ffffff !important;
-}
-
-.badge-mvd {
-    background-color: #1d4ed8 !important;
-    color: #ffffff !important;
-}
-
-.badge-prokuratura {
-    background-color: #38bdf8 !important;
-    color: #000000 !important;
-}
-
-.badge-army {
-    background-color: #3f471b !important;
-    color: #ffffff !important;
-}
-
-/* Кнопки действий */
 .btn-group {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .btn-group a {
@@ -169,223 +147,6 @@ header h1 {
     transform: translateY(-1px);
 }
 
-/* ==================== МОДАЛЬНОЕ ОКНО КАТЕГОРИЙ ==================== */
-.categories-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 9999;
-    margin: 0;
-    padding: 0;
-}
-
-.categories-window {
-    background-color: #181f1a;
-    border: 1px solid #4B5320;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 550px;
-    padding: 24px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column; 
-    align-items: stretch; /* Растягиваем элементы на всю ширину окна */
-}
-
-.categories-window h2 {
-    color: #ffffff;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center; /* Заголовок строго по центру */
-    width: 100%;
-}
-
-.categories-close {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    background: none;
-    border: none;
-    color: #a0a0a0;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.categories-close:hover {
-    color: #ffffff;
-}
-
-.category-item {
-    margin-bottom: 12px;
-    width: 100%; /* Добавьте эту строчку */
-}
-
-/* Базовый стиль заголовков в модалке */
-.category-title {
-    width: 100%;
-    text-align: left;
-    background-color: #2b3524;
-    color: #ffffff;
-    border: 1px solid #4B5320;
-    padding: 12px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: filter 0.2s;
-}
-
-.category-title:hover {
-    filter: brightness(1.15);
-}
-
-/* Цветовое оформление кнопок ведомств в модалке */
-.btn-uk {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-}
-
-.btn-fsb {
-    background-color: #8b0000 !important;
-    color: #ffffff !important;
-}
-
-.btn-army {
-    background-color: #3f471b !important;
-    color: #ffffff !important;
-}
-
-.btn-mvd {
-    background-color: #1d4ed8 !important;
-    color: #ffffff !important;
-}
-
-.btn-prokuratura {
-    background-color: #1e3a8a !important;
-    color: #ffffff !important;
-}
-
-/* Выпадающий контент */
-.category-content {
-    display: none;
-    padding: 12px 16px;
-    background-color: #121614;
-    border: 1px solid #2b3524;
-    border-top: none;
-    border-radius: 0 0 6px 6px;
-}
-
-.category-content button {
-    background: #2b3524;
-    border: 1px solid #4B5320;
-    color: #ffffff;
-    padding: 8px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    width: 100%;
-    text-align: left;
-    transition: background-color 0.2s;
-}
-
-.category-content button:hover {
-    background-color: #4B5320;
-}
-/* Цветовое оформление кнопок ведомств в модалке */
-.btn-uk {
-    background-color: #374151 !important; /* Мягкий нейтрально-серый цвет, не режет глаза */
-    color: #ffffff !important;
-}
-
-.btn-fsb {
-    background-color: #8b0000 !important;
-    color: #ffffff !important;
-}
-
-.btn-army {
-    background-color: #3f471b !important;
-    color: #ffffff !important;
-}
-
-.btn-mvd {
-    background-color: #1d4ed8 !important;
-    color: #ffffff !important;
-}
-
-.btn-prokuratura {
-    background-color: #1e293b !important; /* Насыщенный глубокий темно-синий/аспидный цвет */
-    color: #ffffff !important;
-}
-
-/* Выпадающий контент внутри категорий */
-.category-content {
-    display: none;
-    padding: 12px 16px;
-    background-color: #161616;
-    border: 1px solid #2b2b2b;
-    border-top: none;
-    border-radius: 0 0 6px 6px;
-}
-
-.category-content button {
-    background-color: #222222;
-    border: 1px solid #333333;
-    color: #ffffff;
-    padding: 10px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    width: 100%;
-    text-align: left;
-    transition: background-color 0.2s;
-}
-
-.category-content button:hover {
-    background-color: #333333;
-}
-/* Кнопка доната / поддержки */
-.donate-btn-container {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.btn-donate {
-    background-color: #2e4d2b; /* Приятный зеленый оттенок для доната */
-    color: #ffffff;
-    border: 1px solid #4B5320;
-    padding: 10px 22px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-.btn-donate:hover {
-    background-color: #3b6337;
-    transform: translateY(-1px);
-}
-.subtitle {
-    font-size: 14px;
-    color: #a0a0a0;
-    text-align: center;
-    padding: 0 15px;
-    word-break: break-word;
-}
-/* ==================== СТРУКТУРА СТАТЕЙ (ЧАСТИ, ПУНКТЫ, ПОДПУНКТЫ) ==================== */
-
 .article-part {
     background-color: #161c17;
     border: 1px solid #2b3524;
@@ -405,68 +166,95 @@ header h1 {
     color: #d0d0d0;
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 8px;
 }
 
-/* Первый уровень подпунктов (а, б, в) */
-.sub-points {
-    list-style: none !important;
-    list-style-type: none !important;
-    padding-left: 0;
-    margin: 6px 0;
+/* Модальное окно */
+.categories-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
 }
 
-.sub-points > li {
-    list-style: none !important;
-    list-style-type: none !important;
-    color: #c0c0c0;
-    font-size: 0.95rem;
-    padding: 4px 0;
+.categories-window {
+    background-color: #181f1a;
+    border: 1px solid #4B5320;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 550px;
+    padding: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
     display: flex;
-    gap: 8px;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
-.sub-points > li > span {
-    color: #8b9bb4;
-    font-weight: bold;
-    min-width: 20px;
+.categories-window h2 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Второй уровень подпунктов (если внутри пункта есть еще дефисы или цифры 1, 2) */
-.sub-points-deep {
-    list-style: none;
-    padding-left: 20px;
-    margin: 4px 0;
+.categories-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: #a0a0a0;
+    font-size: 1.8rem;
+    cursor: pointer;
 }
-.sub-points-deep li {
-    color: #a8a8a8;
+
+.categories-close:hover {
+    color: #ffffff;
+}
+
+.category-item {
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.category-title {
+    width: 100%;
+    text-align: left;
+    background-color: #2b3524;
+    color: #ffffff;
+    border: 1px solid #4B5320;
+    padding: 12px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.category-content {
+    display: none;
+    padding: 12px 16px;
+    background-color: #121614;
+    border: 1px solid #2b3524;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.category-content button {
+    background: #2b3524;
+    border: 1px solid #4B5320;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 0.9rem;
-    padding: 3px 0;
-    display: flex;
-    gap: 8px;
-}
-
-.sub-points-deep li span {
-    color: #4B5320;
-    font-weight: bold;
-}
-/* Подпункты на div-элементах (без точек) */
-.sub-points {
-    margin: 6px 0 0 15px;
-}
-
-.sub-item {
-    color: #c0c0c0;
-    font-size: 0.95rem;
-    padding: 4px 0;
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-}
-
-.sub-item > span {
-    color: #8b9bb4;
-    font-weight: bold;
-    min-width: 20px;
+    width: 100%;
+    text-align: left;
 }
