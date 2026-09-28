@@ -1,388 +1,402 @@
 body {
-    background-color: #121614;
-    color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #121614;
+  color: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 1100px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1100px;
 }
 
 header h1 {
-    color: #ffffff;
-    margin-bottom: 5px;
+  color: #ffffff;
+  margin-bottom: 5px;
 }
 
 .alpha-banner {
-    background-color: #2b3524;
-    border: 1px solid #4B5320;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    word-break: break-all; /* Эта строчка принудительно перенесет длинную ссылку */
+  background-color: #2b3524;
+  border: 1px solid #4b5320;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  word-break: break-all; /* Эта строчка принудительно перенесет длинную ссылку */
 }
 
 .subtitle {
-    font-size: 14px;
-    color: #a0a0a0;
-    text-align: center;
-    padding: 0 15px;
-    word-break: break-word;
+  font-size: 14px;
+  color: #a0a0a0;
+  text-align: center;
+  padding: 0 15px;
+  word-break: break-word;
 }
 
 .category-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
 
 .cat-btn {
-    background-color: #2b3524;
-    color: #ffffff;
-    border: 1px solid #4B5320;
-    padding: 10px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: background-color 0.2s;
+  background-color: #2b3524;
+  color: #ffffff;
+  border: 1px solid #4b5320;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
 }
 
 .cat-btn:hover {
-    background-color: #4B5320;
+  background-color: #4b5320;
 }
 
 .search-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto 25px auto;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 25px auto;
 }
 
 #searchInput {
-    width: 100%;
-    padding: 14px 18px;
-    background-color: #1c231e;
-    border: 1px solid #4B5320;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 1.05rem;
-    box-sizing: border-box;
-    outline: none;
+  width: 100%;
+  padding: 14px 18px;
+  background-color: #1c231e;
+  border: 1px solid #4b5320;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+  outline: none;
 }
 
 #searchInput:focus {
-    border-color: #6b772e;
-    box-shadow: 0 0 8px rgba(75, 83, 32, 0.6);
+  border-color: #6b772e;
+  box-shadow: 0 0 8px rgba(75, 83, 32, 0.6);
 }
 
 #articlesList {
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .card {
-    background-color: #1c231e;
-    border: 1px solid #4B5320;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    box-sizing: border-box;
+  background-color: #1c231e;
+  border: 1px solid #4b5320;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card h2 {
-    color: #ffffff !important;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 1.35rem;
+  color: #ffffff !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.35rem;
 }
 
 .badge {
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 0.85rem;
-    display: inline-block;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: inline-block;
 }
 
 .badge-uk {
-    background-color: #4B5320 !important;
-    color: #ffffff !important;
+  background-color: #4b5320 !important;
+  color: #ffffff !important;
 }
 
 .btn-group {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .btn-group a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.btn-copy, .btn-info {
-    background-color: #2b3524;
-    color: #ffffff;
-    border: 1px solid #4B5320;
-    padding: 9px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: background-color 0.2s, transform 0.1s;
+.btn-copy,
+.btn-info {
+  background-color: #2b3524;
+  color: #ffffff;
+  border: 1px solid #4b5320;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
 }
 
-.btn-copy:hover, .btn-info:hover {
-    background-color: #4B5320;
-    transform: translateY(-1px);
+.btn-copy:hover,
+.btn-info:hover {
+  background-color: #4b5320;
+  transform: translateY(-1px);
 }
 
 .article-part {
-    background-color: #161c17;
-    border: 1px solid #2b3524;
-    border-radius: 6px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
+  background-color: #161c17;
+  border: 1px solid #2b3524;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
 }
 
 .part-number {
-    color: #38bdf8;
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 6px;
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
 }
 
 .part-text {
-    color: #d0d0d0;
-    font-size: 1rem;
-    line-height: 1.5;
+  color: #d0d0d0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Модальное окно */
 .categories-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
 }
 
 .categories-window {
-    background-color: #181f1a;
-    border: 1px solid #4B5320;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 550px;
-    padding: 24px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
+  background-color: #181f1a;
+  border: 1px solid #4b5320;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 550px;
+  padding: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
 }
 
 .categories-window h2 {
-    color: #ffffff;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .categories-close {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    background: none;
-    border: none;
-    color: #a0a0a0;
-    font-size: 1.8rem;
-    cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .categories-close:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .category-item {
-    margin-bottom: 12px;
-    width: 100%;
+  margin-bottom: 12px;
+  width: 100%;
 }
 
 .category-title {
-    width: 100%;
-    text-align: left;
-    background-color: #2b3524;
-    color: #ffffff;
-    border: 1px solid #4B5320;
-    padding: 12px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-    font-weight: 600;
+  width: 100%;
+  text-align: left;
+  background-color: #2b3524;
+  color: #ffffff;
+  border: 1px solid #4b5320;
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .category-content {
-    display: none;
-    padding: 12px 16px;
-    background-color: #121614;
-    border: 1px solid #2b3524;
-    border-top: none;
-    border-radius: 0 0 6px 6px;
+  display: none;
+  padding: 12px 16px;
+  background-color: #121614;
+  border: 1px solid #2b3524;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
 }
 
 .category-content button {
-    background: #2b3524;
-    border: 1px solid #4B5320;
-    color: #ffffff;
-    padding: 8px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    width: 100%;
-    text-align: left;
+  background: #2b3524;
+  border: 1px solid #4b5320;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
 }
 /* Индивидуальные цвета для кнопок ведомств в модальном окне */
 .btn-uk {
-    background-color: #2b3524 !important;
-    border-color: #4B5320 !important;
+  background-color: #2b3524 !important;
+  border-color: #4b5320 !important;
 }
 
 .btn-fsb {
-    background-color: #e11f0a !important;
-    border-color: #c0392b !important;
+  background-color: #e11f0a !important;
+  border-color: #c0392b !important;
 }
 
 .btn-army {
-    background-color: #2d261b !important;
-    border-color: #d97706 !important;
+  background-color: #2d261b !important;
+  border-color: #d97706 !important;
 }
 
 .btn-mvd {
-    background-color: #172554 !important;
-    border-color: #3b82f6 !important;
+  background-color: #172554 !important;
+  border-color: #3b82f6 !important;
 }
 
 .btn-prokuratura {
-    background-color: #3b0764 !important;
-    border-color: #9333ea !important;
+  background-color: #3b0764 !important;
+  border-color: #9333ea !important;
 }
 
 /* Эффект наведения мыши для них */
-.category-title.btn-fsb:hover { background-color: #c0392b !important; }
-.category-title.btn-army:hover { background-color: #b45309 !important; }
-.category-title.btn-mvd:hover { background-color: #1d4ed8 !important; }
-.category-title.btn-prokuratura:hover { background-color: #7e22ce !important; }
+.category-title.btn-fsb:hover {
+  background-color: #c0392b !important;
+}
+.category-title.btn-army:hover {
+  background-color: #b45309 !important;
+}
+.category-title.btn-mvd:hover {
+  background-color: #1d4ed8 !important;
+}
+.category-title.btn-prokuratura:hover {
+  background-color: #7e22ce !important;
+}
 /* Делаем карточки статей почти черными */
 .card {
-    background-color: #141715 !important;
-    border-color: #2a332d !important;
+  background-color: #141715 !important;
+  border-color: #2a332d !important;
 }
 
 /* Делаем текст в частях статей приятно-серым */
 .part-text {
-    color: #b0b0b0 !important;
+  color: #b0b0b0 !important;
 }
 
 /* Делаем кнопку УК РФ стильной и заметной (темно-графитовый оттенок) */
 .btn-uk {
-    background-color: #1e293b !important;
-    border-color: #475569 !important;
+  background-color: #1e293b !important;
+  border-color: #475569 !important;
 }
 
-.category-title.btn-uk:hover { 
-    background-color: #334155 !important; 
+.category-title.btn-uk:hover {
+  background-color: #334155 !important;
 }
 /* Делаем выпадающий блок (контейнер) под фракцией почти черным */
 .category-content {
-    display: none;
-    padding: 12px 16px;
-    background-color: #141715 !important;
-    border: 1px solid #242b26 !important;
-    border-top: none;
-    border-radius: 0 0 6px 6px;
+  display: none;
+  padding: 12px 16px;
+  background-color: #141715 !important;
+  border: 1px solid #242b26 !important;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
 }
 /* Перекрашиваем сами кнопки статей внутри выпадающих списков в темно-серый цвет */
 .category-content button {
-    background-color: #141715 !important;
-    border-color: #2a332d !important;
-    color: #b0b0b0 !important;
-    padding: 8px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    width: 100%;
-    text-align: left;
-    transition: background-color 0.2s, color 0.2s;
+  background-color: #141715 !important;
+  border-color: #2a332d !important;
+  color: #b0b0b0 !important;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 /* Цвет этих кнопок при наведении мыши */
 .category-content button:hover {
-    background-color: #1f2621 !important;
-    border-color: #3d4d42 !important;
-    color: #ffffff !important;
+  background-color: #1f2621 !important;
+  border-color: #3d4d42 !important;
+  color: #ffffff !important;
 }
 .section-divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 40px 0 20px 0;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0 20px 0;
+  width: 100%;
 }
 
 .section-divider::before,
 .section-divider::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #ffffff;
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ffffff;
 }
 
 .section-divider span {
-    padding: 0 20px;
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: bold;
+  padding: 0 20px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .chapter-title {
-    width: 100%;
-    text-align: center;
-    margin: 30px 0 15px 0;
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 15px 0;
 }
 
 .chapter-title h3 {
-    color: #f39c12;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  color: #f39c12;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .badge-fsb {
-    background-color: #e74c3c; /* Красный цвет для ФСБ */
-    color: #ffffff;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 10px;
+  background-color: #e74c3c; /* Красный цвет для ФСБ */
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 /* Стили для карточек и бейджей подразделений Армии (БО, ОС, ВП, МСВ, ВДВ, ССО) */
 .card[data-category="army-bo"],
@@ -391,7 +405,7 @@ header h1 {
 .card[data-category="army-msv"],
 .card[data-category="army-vdv"],
 .card[data-category="army-sso"] {
-    border-left: 4px solid #d97706; /* Цвет левой полоски карточки */
+  border-left: 4px solid #d97706; /* Цвет левой полоски карточки */
 }
 
 .card[data-category="army-bo"] .badge,
@@ -400,6 +414,15 @@ header h1 {
 .card[data-category="army-msv"] .badge,
 .card[data-category="army-vdv"] .badge,
 .card[data-category="army-sso"] .badge {
-    background-color: #d97706; /* Цвет фона бейджа */
-    color: #ffffff;            /* Цвет текста */
+  background-color: #d97706; /* Цвет фона бейджа */
+  color: #ffffff; /* Цвет текста */
+}
+/* Синий цвет специально для бейджиков МВД */
+.badge-mvd {
+  background-color: #2563eb; /* Приятный синий цвет */
+  color: #ffffff; /* Белый текст */
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
 }
