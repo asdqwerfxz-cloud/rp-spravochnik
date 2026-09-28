@@ -46,7 +46,8 @@ function filterCategory(category) {
     }
 
     cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
+       const cardCat = card.getAttribute('data-category') || '';
+if (category === 'all' || cardCat === category || cardCat.startsWith(category + '-')) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
