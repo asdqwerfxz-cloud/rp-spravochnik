@@ -15,7 +15,7 @@ function openCategoriesModal() {
   const modal = document.getElementById("categoriesModal");
   if (modal) {
     modal.style.display = "flex";
-    modal.style.pointerEvents = "auto"; // Добавлена эта строка
+    modal.style.pointerEvents = "auto";
   }
 }
 
@@ -103,8 +103,6 @@ function searchArticles() {
 
     if (matchesAll) {
       card.style.display = "block";
-      // Поднимаем найденную статью в самый верх под строку поиска
-      articlesList.prepend(card);
     } else {
       card.style.display = "none";
     }
