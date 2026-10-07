@@ -20,7 +20,14 @@ function closeCategoriesModal() {
   const modal = document.getElementById("categoriesModal");
   if (modal) {
     modal.style.display = "none";
+    modal.style.pointerEvents = "none"; // Гарантированно отключаем клики по фону
   }
+
+  // Сворачиваем все выпадающие списки внутри модалки при закрытии
+  const lists = document.querySelectorAll(".category-content");
+  lists.forEach((list) => {
+    list.style.display = "none";
+  });
 }
 
 // Переключение (разворачивание/сворачивание) полочек
@@ -51,8 +58,12 @@ function filterCategory(category) {
 
   // Если выбрано «Все статьи»
   if (category === "all") {
-    allHeadings.forEach((item) => (item.style.display = "block"));
-    cards.forEach((card) => (card.style.display = "block"));
+    allHeadings.forEach((item) => {
+      item.style.display = ""; // Возвращаем исходный CSS-стиль заголовков
+    });
+    cards.forEach((card) => {
+      card.style.display = ""; // Возвращаем исходный CSS-стиль карточек
+    });
   } else {
     // Скрываем общие заголовки, показываем только нужные карточки
     allHeadings.forEach((item) => (item.style.display = "none"));
@@ -84,8 +95,8 @@ function searchArticles() {
 
   // Если поиск пустой — возвращаем всё как было
   if (searchTerms.length === 0) {
-    cards.forEach((card) => (card.style.display = "block"));
-    allHeadings.forEach((item) => (item.style.display = "block"));
+    cards.forEach((card) => (card.style.display = ""));
+    allHeadings.forEach((item) => (item.style.display = ""));
     return;
   }
 
