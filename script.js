@@ -29,9 +29,13 @@ function closeCategoriesModal() {
 // Переключение (разворачивание) списков внутри модалки
 function toggleCategory(listId) {
   const list = document.getElementById(listId);
-  if (list) {
-    const isVisible = list.style.display === "block";
-    list.style.display = isVisible ? "none" : "block";
+  if (!list) return;
+
+  const currentDisplay = window.getComputedStyle(list).display;
+  if (currentDisplay === "none" || currentDisplay === "") {
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
   }
 }
 
