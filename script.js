@@ -67,16 +67,13 @@ function filterCategory(category) {
   closeCategoriesModal();
 }
 
-// Универсальный поиск с автоскрытием всех глав и заголовков
+// Универсальный поиск с автокрытием всех глав и заголовков
 function searchArticles() {
-  const query = document
-    .getElementById("searchInput")
-    .value.toLowerCase()
-    .trim();
-  const cards = document.querySelectorAll(".card");
-  const articlesList = document.getElementById("articlesList");
+  const searchInput = document.getElementById("searchInput");
+  if (!searchInput) return;
 
-  // Находим абсолютно все заголовки, главы и разделители на странице
+  const query = searchInput.value.toLowerCase().trim();
+  const cards = document.querySelectorAll(".card");
   const allHeadings = document.querySelectorAll(
     ".chapter-title, .section-divider, h3, h4",
   );
@@ -89,7 +86,7 @@ function searchArticles() {
     return;
   }
 
-  // Во время поиска скрываем вообще все заголовки глав, чтобы они не занимали место сверху
+  // Во время поиска скрываем вообще все заголовки глав
   allHeadings.forEach((item) => (item.style.display = "none"));
 
   cards.forEach((card) => {
