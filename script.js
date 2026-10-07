@@ -42,7 +42,7 @@ function filterCategory(category) {
     ".chapter-title, .section-divider, h3, h4",
   );
   const searchInput = document.getElementById("searchInput");
-  if (searchInput) searchInput.value = ""; // Сбрасываем поисковый ввод
+  if (searchInput) searchInput.value = ""; // сбрасываем поисковый ввод
 
   // Если выбраны «Все статьи» — возвращаем заголовки обратно, иначе скрываем их
   if (category === "all") {
